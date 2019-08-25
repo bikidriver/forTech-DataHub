@@ -12,32 +12,32 @@ public class Main
 	public static void main(String[] args) 
 	{
 	    
-	System.out.println("Please enter unique integers for the list BinarySearch will use.\nThe List will have 10 elements as an example");
-    	for (int i = 0;i<10;i++) //read the list from the console
-        {
-        	list[i]=Integer.parseInt(System.console().readLine());
-        }
-        
-        
-        quicksort(0,list.length-1); //sort the entered list
-        System.out.println("\nYour input has been sorted:\nList:");
-        printout(list); //show off sorted list
-        
-        
-        System.out.println("\nPlease enter the integer you are searching for.");
-        int x=Integer.parseInt(System.console().readLine()); //enter the target element
-        System.out.println("\nThank you. We will now search for "+x+" in the list.");
-        int answer=BinarySearch(x)+1; //search for the target element
-        
-        
-        if (answer==11) //elemt not found
-        {
-             System.out.println("Your input was not found in the list!");
-        }
-        else //element found
-        {
-             System.out.println("The number you were searching for is the "+answer+ " element of the list!");
-        }
+		System.out.println("Please enter unique integers for the list BinarySearch will use.\nThe List will have 10 elements as an example");
+		for (int i = 0;i<10;i++) //read the list from the console
+		{
+			list[i]=Integer.parseInt(System.console().readLine());
+		}
+
+
+		quicksort(0,list.length-1); //sort the entered list
+		System.out.println("\nYour input has been sorted:\nList:");
+		printout(list); //show off sorted list
+
+
+		System.out.println("\nPlease enter the integer you are searching for.");
+		int x=Integer.parseInt(System.console().readLine()); //enter the target element
+		System.out.println("\nThank you. We will now search for "+x+" in the list.");
+		int answer=BinarySearch(x)+1; //search for the target element
+
+
+		if (answer==11) //elemt not found
+		{
+		     System.out.println("Your input was not found in the list!");
+		}
+		else //element found
+		{
+		     System.out.println("The number you were searching for is the "+answer+ " element of the list!");
+		}
     
 	}
 	
@@ -87,10 +87,10 @@ public class Main
 	
 	public static void printout(int[] list) //print list
 	{
-	    for (int i = 0;i<10;i++)
-        {
-        	System.out.println(list[i]);
-        }
+		    for (int i = 0;i<10;i++)
+		{
+			System.out.println(list[i]);
+		}
 	}
 	
 	public static int BinarySearch(int x) //BinarySearch
@@ -100,20 +100,20 @@ public class Main
 	    
 	    while (l<=r)
 	    {
-            int m=(l+r+((l+r)%2))/2;
-            
-            if(list[m]>x)
-            {
-                r=m-1;
-            }
-            if(list[m]<x)
-            {
-                l=m+1;
-            }
-            if(list[m]==x)
-            {
-                return m;
-            }
+		    int m=(l+r+((l+r)%2))/2;
+
+		    if(list[m]>x)
+		    {
+			r=m-1;
+		    }
+		    if(list[m]<x)
+		    {
+			l=m+1;
+		    }
+		    if(list[m]==x)
+		    {
+			return m;
+		    }
 	    } 
 	    return 10;
 	}   
